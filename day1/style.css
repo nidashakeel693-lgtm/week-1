@@ -1,0 +1,352 @@
+:root {
+  --heading-color: #203d66;
+  --text-color: #555;
+  --primary: #007bff;
+  --bg-light: #f8faff;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about h1 {
+  font-size: clamp(36px, 5vw, 55px);
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--text-color);
+}
+
+/* Who Section */
+.who-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* ensures both boxes have equal height */
+  gap: 40px;
+  margin: 60px auto;
+  padding: 5px;
+  max-width: 1300px;
+  
+}
+.info {
+  flex: 1;
+  border-radius: 20px;
+  border: 1px solid #d1d1d1;
+  background-color: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 340px; /* same as team-member */
+}
+.container {
+  flex: 1.1;
+  border-radius: 20px;
+  border: 1px solid #d1d1d1;
+  background-color: #ffffff;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 340px; /* same as team-member */
+  overflow: hidden; /* keep corners clean */
+}
+
+.info h2 {
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.info p {
+  text-align: justify;
+  color: var(--text-color);
+  font-size: 16px;
+}
+.container-box {
+padding: 0;
+overflow: hidden;
+
+}
+.container iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  border: none;
+  object-fit: cover;
+   flex-grow: 1; /* ensures it stretches fully */
+  display: block;
+}
+
+
+/* TEAM SECTION */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;   /* makes all child cards same height */
+  gap: 40px;
+  margin: 60px auto;
+  padding: 5px;
+  max-width: 1300px;
+}
+
+/* TEAM MEMBER CARDS */
+.team-member {
+  flex: 1 1 550px;              /* allows responsive resizing */
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* balances image and text */
+  height: 100%;                   /* ensure fills parent height */
+  min-height: 340px;              /* match who-section height */
+}
+
+/* TEAM MEMBER IMAGE */
+.team-member img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+}
+
+/* TEAM MEMBER TEXT */
+.team-member h2 {
+  font-size: 20px;
+  color: #203d66;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-member h3 {
+  color: #007bff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.team-member p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+/* AWS Section */
+.aws {
+  background: url("aws.png") center/cover no-repeat;
+  position: relative;
+  height: 500px;
+  width: 1300px;
+  margin: 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+  color: #fff;
+}
+
+.aws::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.aws-content {
+  position: relative;
+  max-width: 450px;
+}
+
+.aws-content h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.aws-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Weather Section */
+.weather-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 5px;
+  
+}
+
+.weather-box {
+  flex: 1 1 450px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  
+}
+
+.weather-box h3 {
+  color: var(--heading-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.weather-box p {
+  color: var(--text-color);
+  text-align: justify;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  color: #0d1b2a;
+  padding: 50px 60px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.app-buttons img {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--heading-color);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary);
+}
+
+.footer hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.footer-bottom img {
+  width: 100px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .who-section, .team, .weather-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info, .container, .weather-box, .team-member {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .aws {
+    height: 300px;
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .aws-content {
+    max-width: 90%;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
